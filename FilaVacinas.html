@@ -1,0 +1,57 @@
+<script>
+    let filaGripe = [];
+let filaCovid = [];
+
+let opcao;
+
+while (opcao != 7) {
+
+    opcao = Number(prompt(
+        "1 - Cadastrar pessoa na fila da gripe\n" +
+        "2 - Cadastrar pessoa na fila da COVID\n" +
+        "3 - Chamar pessoa da fila da gripe\n" +
+        "4 - Chamar pessoa da fila da COVID\n" +
+        "5 - Mostrar fila da gripe\n" +
+        "6 - Mostrar fila da COVID\n" +
+        "7 - Sair"
+    ));
+
+    if (opcao == 1) {
+        let nome = prompt("Nome da pessoa:");
+        filaGripe.push(nome);
+    }
+
+    else if (opcao == 2) {
+        let nome = prompt("Nome da pessoa:");
+        filaCovid.push(nome);
+    }
+
+    else if (opcao == 3) {
+        if (filaGripe.length > 0) {
+            alert("Chamado: " + filaGripe.shift());
+        } else {
+            alert("Fila da gripe vazia.");
+        }
+    }
+
+    else if (opcao == 4) {
+        if (filaCovid.length > 0) {
+            alert("Chamado: " + filaCovid.shift());
+        } else {
+            alert("Fila da COVID vazia.");
+        }
+    }
+
+    else if (opcao == 5) {
+        alert("Fila da gripe: " + filaGripe);
+    }
+
+    else if (opcao == 6) {
+        alert("Fila da COVID: " + filaCovid);
+    }
+
+    else if (opcao == 7) {
+        alert("Programa encerrado.");
+    }
+}
+</script>
