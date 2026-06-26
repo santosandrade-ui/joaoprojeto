@@ -1,0 +1,18 @@
+<script>
+    let quantidade = Number(prompt("quantos alunos tem na sala?"));
+
+let alunos = [];
+
+for (let i = 0; i < quantidade; i++) {
+    let nome = prompt("digite o nome do aluno " + (i + 1) + ":");
+    alunos.push(nome);
+}
+
+let lista = "alunos da sala:\n";
+
+for (let i = 0; i < alunos.length; i++) {
+    lista += (i + 1) + " - " + alunos[i] + "\n";
+}
+
+alert(lista);
+</script>
