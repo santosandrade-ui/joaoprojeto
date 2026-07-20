@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>regra de 3</title>
+</head>
+<body>
+  <h1>CALCULADORA DE REGRA DE 3</h1>
+
+<p>
+    <input type="number" id="a"> ----- 
+    <input type="number" id="b">
+</p>
+
+<p>
+    <input type="number" id="c"> ----- X
+</p>
+
+<input type="button" value="Calcular X" onclick="resultado2(a.value, b.value, c.value)">
+
+<p id="resultado"></p>
+
+<script>
+function regraTres(a, b, c){
+    return (b * c) / a;
+}
+
+function resultado2(a, b, c){
+    let x = regraTres(a, b, c);
+    resultado.innerHTML = "X É IGUAL A " + x + "";
+}
+</script>
+</body>
+</html>
