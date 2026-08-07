@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<h1>CALCULADORA</h1>
+
+<p>
+    Primeiro número:
+    <input type="number" id="n1">
+</p>
+
+<p>
+    Segundo número:
+    <input type="number" id="n2">
+</p>
+
+<input type="button" value="+" onclick="somar()">
+<input type="button" value="-" onclick="subtrair()">
+<input type="button" value="*" onclick="multiplicar()">
+<input type="button" value="/" onclick="dividir()">
+<input type="button" value="Limpar" onclick="limpar()">
+
+<p id="resultado">Aguardando valores...</p>
+
+<script>
+
+function somar(){
+    let joao = Number(n1.value) + Number(n2.value);
+    resultado.innerHTML = "Resultado = " + joao;
+}
+
+function subtrair(){
+    let joao = Number(n1.value) - Number(n2.value);
+    resultado.innerHTML = "Resultado = " + joao;
+}
+
+function multiplicar(){
+    let joao = Number(n1.value) * Number(n2.value);
+    resultado.innerHTML = "Resultado = " + joao;
+}
+
+function dividir(){
+
+    if(Number(n2.value) == 0){
+        resultado.innerHTML = "Não é possível dividir por zero.";
+    }else{
+        let joao = Number(n1.value) / Number(n2.value);
+        resultado.innerHTML = "Resultado = " + joao;
+    }
+
+}
+
+function limpar(){
+    n1.value = "";
+    n2.value = "";
+    resultado.innerHTML = "Aguardando valores...";
+}
+
+</script>
+
+</body>
+</html>
